@@ -1,0 +1,12 @@
+syntax: glob
+.idea
+.gradle
+target/*
+build/*
+.gradle/*
+**.DS_Store
+.settings
+.classpath
+.project
+.springBeans
+bin

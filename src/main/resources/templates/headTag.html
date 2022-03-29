@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+    Content of the HTML header tag to be included in all Thymeleaf views
+    -->
+    <head th:fragment="headTag">
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+        <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+        <title>Case Management System</title>
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css"/>
+        
+        <link rel="stylesheet" th:href="@{/styles/styles.css}"/>
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript" th:inline="javascript">
+        	var contextPath = /*[[ @{/} ]]*/ '';	// thymeleaf inline syntax to get web app context
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

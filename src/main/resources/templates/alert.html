@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div th:fragment="alert (type, message)"
+         class="alert alert-warning fade in" th:classappend="'alert-' + ${type}">
+      <a href="#" class="close" data-dismiss="alert">×</a>
+      <span th:text="${message}">Test</span>
+    </div>
+  </body>
+</html>

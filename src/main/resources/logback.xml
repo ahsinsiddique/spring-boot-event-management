@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true">
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>utf-8</charset>
+            <!-- Specify %c if you want the class name to be logged -->
+            <Pattern>[%p] %d{yyyy-MM-dd HH:mm:ss}  %m%n</Pattern>
+        </encoder>
+    </appender>
+    
+    <!-- Set org.hibernate.SQL to DEBUG in order to log Hibernate generated SQL statements, 
+        but this does not include logging the query parameter values.
+        Set org.hibernate.type.descriptor.sql to TRACE in order to also log the query parameter values.
+        See also : http://www.thoughts-on-java.org/hibernate-logging-guide/
+    -->
+    <logger name="org.hibernate.SQL" level="DEBUG"/>
+    <logger name="org.hibernate.type.descriptor.sql" level="TRACE"/>
+    
+    <logger name="com.mycompany" level="DEBUG"/>
+    
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>
